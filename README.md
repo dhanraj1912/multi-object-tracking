@@ -1,8 +1,35 @@
-# YOLOv8 + DeepSORT Multi-Person Tracker
+# Multi-Person Tracker - YOLOv8 + DeepSORT
 
 A production-grade person tracking pipeline with stable, persistent IDs across frames — even through occlusion and re-appearance.
 
 ---
+##Video link
+https://drive.google.com/file/d/1deCuvX9JryZI-LTlxEo9i2syQZDjBzeA/view?usp=sharing
+Approach
+
+The pipeline is divided into two main stages:
+
+##1. Detection
+
+We use YOLOv8 for detecting people in each frame.
+
+Fast and efficient
+Performs well on real-world footage
+Only the person class is considered
+
+##2. Tracking
+
+For tracking, we use DeepSORT.
+
+Unlike simple trackers, DeepSORT uses:
+
+Motion prediction (Kalman Filter)
+Appearance features (Re-ID embeddings)
+
+This allows the system to:
+
+Keep track of individuals even after short occlusions
+Reduce ID switching in crowded scenes
 
 ## Why DeepSORT over ByteTrack / SORT?
 
@@ -124,3 +151,5 @@ Appearance similarity gate. Two embeddings are considered "the same person" if c
 - Performance depends on video quality and lighting
 - DeepSORT may struggle with identical-looking individuals
 - Real-time performance may drop on CPU-only systems
+
+- 
