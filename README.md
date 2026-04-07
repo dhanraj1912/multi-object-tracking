@@ -3,8 +3,7 @@
 A production-grade person tracking pipeline with stable, persistent IDs across frames — even through occlusion and re-appearance.
 
 ---
-##Video link
-https://drive.google.com/file/d/1deCuvX9JryZI-LTlxEo9i2syQZDjBzeA/view?usp=sharing
+
 Approach
 
 The pipeline is divided into two main stages:
