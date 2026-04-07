@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Object Tracker - YOLOv8 + DeepSORT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Multi-Object Tracker</h1>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="https://github.com/dhanraj1912/multi-object-tracking" target="_blank" class="btn-github">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h2>Production-Grade Person Tracking</h2>
+            <p>Stable, persistent IDs across frames — even through occlusion and re-appearance</p>
+            <p class="subtitle">Powered by YOLOv8 Detection + DeepSORT Tracking</p>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h3>Key Features</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🎯 Real-time Detection</h4>
+                    <p>YOLOv8 nano model for fast, accurate person detection at 30+ FPS</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🔄 Persistent Tracking</h4>
+                    <p>DeepSORT maintains stable IDs even when people are occluded or leave frame</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎬 Video Processing</h4>
+                    <p>Input and output video files with annotated bounding boxes and ID labels</p>
+                </div>
+                <div class="feature-card">
+                    <h4>⚡ Fast & Lightweight</h4>
+                    <p>Optimized for real-world deployment with minimal hardware requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="demo">
+        <div class="container">
+            <h3>How to Use</h3>
+            <div class="demo-content">
+                <div class="demo-step">
+                    <h4>Step 1: Prepare Your Video</h4>
+                    <p>Place your input video file as <code>input.mp4</code> in the project directory</p>
+                </div>
+                <div class="demo-step">
+                    <h4>Step 2: Run the Tracker</h4>
+                    <pre><code>python main.py</code></pre>
+                </div>
+                <div class="demo-step">
+                    <h4>Step 3: View Results</h4>
+                    <p>Tracked output video is saved as <code>output.mp4</code></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h3>How It Works</h3>
+            <ol class="steps">
+                <li>
+                    <strong>Detection:</strong> YOLOv8 detects all persons in each frame
+                </li>
+                <li>
+                    <strong>Feature Extraction:</strong> DeepSORT extracts appearance features for each detection
+                </li>
+                <li>
+                    <strong>Matching:</strong> Associates detections across frames using appearance + motion
+                </li>
+                <li>
+                    <strong>ID Assignment:</strong> Maintains consistent IDs even through occlusion
+                </li>
+                <li>
+                    <strong>Visualization:</strong> Annotates video with bounding boxes and ID numbers
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="tech-stack">
+        <div class="container">
+            <h3>Technology Stack</h3>
+            <div class="tech-grid">
+                <div class="tech-item">YOLOv8</div>
+                <div class="tech-item">DeepSORT</div>
+                <div class="tech-item">OpenCV</div>
+                <div class="tech-item">Python 3.10+</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h3>Get Started</h3>
+            <p>Clone the repository and run the tracker on your videos</p>
+            <a href="https://github.com/dhanraj1912/multi-object-tracking" target="_blank" class="btn-primary">View on GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Multi-Object Tracker. Built with YOLOv8 & DeepSORT.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
